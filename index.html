@@ -21,19 +21,64 @@
           />
         </a>
         <div class="navbar">
-          <ul>
+          <ul class="desktop-ul">
             <li><a href="index.html" class="active">Acasă</a></li>
-            <li><a href="">Despre Noi</a></li>
-            <li><a href="">Servicii</a></li>
-            <li><a href="">Contact</a></li>
+            <li>
+              <div class="dropdown">
+                <a href="">Mai Multe</a>
+                <div class="dropdown-content">
+                  <a href="">Despre Noi</a>
+                  <a href="">Servicii</a>
+                  <a href="">Contact</a>
+                </div>
+              </div>
+            </li>
             <li><a href="">Solicită o Estimare</a></li>
           </ul>
-          <div class="burger-menu">
-            <a href="">
-              <hr class="burger-line" />
-              <hr class="burger-line" />
-              <hr class="burger-line" />
-            </a>
+          <input type="checkbox" name="" id="sidebar-active" />
+          <label for="sidebar-active" id="overlay"></label>
+          <label for="sidebar-active" class="open-sidebar-button">
+            <!-- <div class="burger-menu">
+              <a href="">
+                <hr class="burger-line" />
+                <hr class="burger-line" />
+                <hr class="burger-line" />
+              </a>
+            </div> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#253993"
+              class="burger-menu"
+            >
+              <path
+                d="M135.87-252.28v-83h688.26v83H135.87Zm0-186.22v-83h688.26v83H135.87Zm0-186.22v-83h688.26v83H135.87Z"
+              />
+            </svg>
+          </label>
+          <div class="links-container-mobile">
+            <label for="sidebar-active" class="close-sidebar-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="#253993"
+              >
+                <path
+                  d="M291-232.35 232.35-291l189-189-189-189L291-727.65l189 189 189-189L727.65-669l-189 189 189 189L669-232.35l-189-189-189 189Z"
+                />
+              </svg>
+            </label>
+            <ul class="mobile-ul">
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="">Despre Noi</a></li>
+              <li><a href="">Servicii</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Estimare</a></li>
+            </ul>
           </div>
         </div>
       </div>
