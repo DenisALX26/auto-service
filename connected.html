@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="connected.css" />
     <link
       rel="shortcut icon"
       href="Needs/WebSite_Logos/Logo-car-repair.png"
@@ -14,7 +14,7 @@
   <body>
     <header>
       <div class="header-content">
-        <a href="index.html">
+        <a href="connected.html">
           <img
             src="Needs/WebSite_Logos/Logo-car-repair.png"
             alt="AutoService Logo"
@@ -22,18 +22,18 @@
         </a>
         <div class="navbar">
           <ul class="desktop-ul">
-            <li><a href="index.html" class="active">Acasă</a></li>
+            <li><a href="connected.html" class="active">Acasă</a></li>
             <li>
               <div class="dropdown">
-                <a href="">Mai Multe</a>
+                <a href="#">Mai Multe</a>
                 <div class="dropdown-content">
-                  <a href="">Despre Noi</a>
-                  <a href="">Servicii</a>
-                  <a href="">Contact</a>
+                  <a href="#">Despre Noi</a>
+                  <a href="#">Servicii</a>
+                  <a href="#">Contact</a>
                 </div>
               </div>
             </li>
-            <li><a href="log_in_form.html" id="blueBtn">Intră În Cont</a></li>
+            <li><a id="blueBtn">Contul Meu</a></li>
           </ul>
           <input type="checkbox" name="" id="sidebar-active" />
           <label for="sidebar-active" id="overlay"></label>
@@ -66,17 +66,38 @@
               </svg>
             </label>
             <ul class="mobile-ul">
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="">Despre Noi</a></li>
-              <li><a href="">Servicii</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Estimare</a></li>
+              <li><a href="connected.html">Acasă</a></li>
+              <li><a href="#">Despre Noi</a></li>
+              <li><a href="#">Servicii</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Contul Meu</a></li>
             </ul>
           </div>
         </div>
       </div>
     </header>
     <main>
+      <div id="myAccountPage">
+        <div id="close-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#000000"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </div>
+        <div class="personal_info">
+          <div id="first-name"><p>Nume:</p></div>
+          <div id="last-name"><p>Prenume:</p></div>
+          <div id="email"><p>Email:</p></div>
+        </div>
+        <button id="log-out">Deconectează-te</button>
+      </div>
       <section class="first-section">
         <div class="container">
           <h1>ne pasă de mașina ta</h1>
@@ -124,12 +145,16 @@
               stabili ora potrivită pentru tine. Ne asigurăm că vehiculul tău va
               primi atenția necesară.
             </p>
-            <a href="" class="illustration"
+            <a class="illustration"
               ><img
                 src="Needs/Details_Section_Icons/calendar-icon.svg"
                 alt="calendar-icon"
               />programează-te</a
             >
+            <div id="calendar-container">
+              <input type="datetime-local" id="calendar" />
+            </div>
+            <button id="confirmDay" onclick="confirmDay()">Confirmă</button>
           </div>
           <div class="cards" id="work">
             <img src="Needs/Details_Section_Icons/briefcase-icon.svg" alt="" />
@@ -162,7 +187,7 @@
             <img src="Needs/Details_Section_Icons/user-icon.svg" alt="" />
             <p>Apeluri de urgență 24/7</p>
             <h3 class="phone-number">0712 345 678</h3>
-            <a href="" class="call-now"
+            <a href="#" class="call-now"
               ><img
                 src="Needs/Details_Section_Icons/Phone_Icons/phone-icon.svg"
                 alt="phone-icon"
@@ -187,7 +212,7 @@
               </p>
             </div>
             <div class="button">
-              <a href="" id="our-services">serviciile noastre</a>
+              <a href="#" id="our-services">serviciile noastre</a>
             </div>
           </div>
           <div class="lower-part">
@@ -383,8 +408,8 @@
           <h3>0712 345 678</h3>
           <hr class="divider" />
           <p>programează-te astăzi</p>
-          <div class="button">
-            <a href=""
+          <div class="button" id="today">
+            <a
               ><img
                 src="Needs/Details_Section_Icons/calendar-icon.svg"
                 alt="calendar-icon"
@@ -396,6 +421,11 @@
               Verifică Orele Disponibile</a
             >
           </div>
+          <div class="set-hour">
+            <label for="time-input">Selectează Ora:</label>
+            <input type="time" id="time-input" />
+          </div>
+          <button id="today-request" onclick="confirmHour()">Confirmă</button>
         </div>
       </section>
     </main>
@@ -444,6 +474,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
-    <script src="no_account.js"></script>
+    <script src="connected.js"></script>
   </body>
 </html>
