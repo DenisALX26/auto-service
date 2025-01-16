@@ -64,7 +64,8 @@ formSubmitBtn.addEventListener("click", () => {
     allFields = 1;
   }
   if (allFields) {
-    if (!emailInput.value.includes("@")) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(emailInput.value) == false) {
       alert("Adresa de email nu este validă!");
     } else {
       email = 1;
